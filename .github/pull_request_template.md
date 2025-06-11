@@ -1,11 +1,3 @@
----
-name: Pull Request template
-about: Create a pull request to improve us
-title: 対応内容 [報告者名]
-assignees: hayato-n8810
-
----
-
 # 対応したissueのURL 
 
 
