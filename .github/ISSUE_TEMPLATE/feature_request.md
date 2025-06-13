@@ -1,24 +1,25 @@
 ---
-name: Feature report
-about: Create a report to develop us
+name: Feature request
+about: Suggest an idea for this project
 title: 追加機能などの内容 [報告者名]
-labels: feature
+labels: enhancement
 assignees: hayato-n8810
 
 ---
 
-# 観察される振る舞い（現状）
+### 観察される振る舞い（現状）
   テキストまたはスクリーンショット
 
 
-# 期待される振る舞い（やりたいこと）
+### 期待される振る舞い（やりたいこと）
 
 
-# 実装方針（どうしたら実現できるかを，だいたいでいいので書いてください）
+### 実装方針（どうしたら実現できるかを，だいたいでいいので書いてください）
 
 
-## その他（空白でも可）
+### その他（空白でも可）
 
+***
 
 ## 最終チェックリスト
 - [x] レビューアをアサインしましたか
