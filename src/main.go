@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 
@@ -17,10 +18,15 @@ func main() {
 
 	enemyHand = getRandom()
 
-	fmt.Println("じゃんけんぽん！")
+	fmt.Print("じゃん")
+	time.Sleep(500 * time.Millisecond)	//0.5秒待機
+	fmt.Print("けん")
+	time.Sleep(500 * time.Millisecond)	//0.5秒待機
+	fmt.Println("ぽん！")
+
 	fmt.Println(enemyHand)
 	rspResult = rspBattle(my_hand, enemyHand)
-
+	time.Sleep(500 * time.Millisecond)	//0.5秒待機
 	printResult(rspResult)
 	fmt.Println("また遊んでね！")
 }
