@@ -18,7 +18,17 @@ func main() {
 	enemyHand = getRandom()
 
 	fmt.Println("じゃんけんぽん！")
-	fmt.Println(enemyHand)
+	switch(enemyHand){
+	case 0:
+		fmt.Println("グー");
+	case 1:
+		fmt.Println("チョキ");
+	case 3:
+		fmt.Println("パー");
+	default:
+		fmt.Println("不具合の検出");
+	}
+
 	rspResult = rspBattle(my_hand, enemyHand)
 
 	printResult(rspResult)
