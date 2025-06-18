@@ -10,18 +10,37 @@ func main() {
 	var my_hand int
 	var enemyHand int
 	var rspResult int
+	var my_win int
+	var enemy_win int
+	var wintimes int
 
-	fmt.Println("出す手を決めてください")
-	fmt.Println("0:グー 1:チョキ 2:パー")
-	fmt.Scan(&my_hand)
+	fmt.Println("何点先取にしますか")
+	fmt.Scan(&wintimes)
 
-	enemyHand = getRandom()
+	for my_win<wintimes && enemy_win<wintimes{
+		fmt.Println("出す手を決めてください")
+		fmt.Println("0:グー 1:チョキ 2:パー")
+		fmt.Scan(&my_hand)
 
-	fmt.Println("じゃんけんぽん！")
-	fmt.Println(enemyHand)
-	rspResult = rspBattle(my_hand, enemyHand)
+		enemyHand = getRandom()
 
-	printResult(rspResult)
+		fmt.Println("じゃんけんぽん！")
+		fmt.Println(enemyHand)
+		rspResult = rspBattle(my_hand, enemyHand)
+
+		printResult(rspResult)
+		if rspResult == 1 {
+			my_win++
+		}else if rspResult == 2 {
+			enemy_win++
+		}
+	}
+	if my_win == wintimes {
+		fmt.Println("勝利！")
+	}
+	if enemy_win == wintimes {
+		fmt.Println("敗北...")
+	}
 	fmt.Println("また遊んでね！")
 }
 
