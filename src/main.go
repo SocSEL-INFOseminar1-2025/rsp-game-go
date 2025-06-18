@@ -10,18 +10,28 @@ func main() {
 	var my_hand int
 	var enemyHand int
 	var rspResult int
+	var endOption string
 
-	fmt.Println("出す手を決めてください")
-	fmt.Println("0:グー 1:チョキ 2:パー")
-	fmt.Scan(&my_hand)
+	for {
+		fmt.Println("出す手を決めてください")
+		fmt.Println("0:グー 1:チョキ 2:パー")
+		fmt.Scan(&my_hand)
 
-	enemyHand = getRandom()
+		enemyHand = getRandom()
 
-	fmt.Println("じゃんけんぽん！")
-	fmt.Println(enemyHand)
-	rspResult = rspBattle(my_hand, enemyHand)
+		fmt.Println("じゃんけんぽん！")
+		fmt.Println(enemyHand)
+		rspResult = rspBattle(my_hand, enemyHand)
 
-	printResult(rspResult)
+		printResult(rspResult)
+		fmt.Println("もう一度遊びますか？(y/n) : ")
+		fmt.Scan(&endOption)
+		if endOption == "y"{
+			continue
+		} else if endOption == "n" {
+			break
+		}
+	}
 	fmt.Println("また遊んでね！")
 }
 
