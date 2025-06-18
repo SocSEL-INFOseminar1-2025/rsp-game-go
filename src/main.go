@@ -28,7 +28,7 @@ func main() {
 func getRandom() int {
 	// 0~2の値を乱数から生成する
 	randomNum := rand.Intn(100)
-	return randomNum % 2
+	return randomNum % 3
 }
 
 func rspBattle(myHand, enemyHand int) int {
