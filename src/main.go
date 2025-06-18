@@ -25,6 +25,9 @@ func main() {
 	fmt.Println("また遊んでね！")
 }
 
+
+
+
 func getRandom() int {
 	// 0~2の値を乱数から生成する
 	randomNum := rand.Intn(100)
