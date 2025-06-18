@@ -11,11 +11,14 @@ func main() {
 	var my_hand int
 	var enemyHand int
 	var rspResult int
+	hand := make(map[int]string) //入力コードから文字に変換
+	hand[0] = "グー"
+	hand[1] = "チョキ"
+	hand[2] = "パー"
 
 	fmt.Println("出す手を決めてください")
 	fmt.Println("0:グー 1:チョキ 2:パー")
 	fmt.Scan(&my_hand)
-
 	enemyHand = getRandom()
 
 	fmt.Print("じゃん")
@@ -23,8 +26,10 @@ func main() {
 	fmt.Print("けん")
 	time.Sleep(500 * time.Millisecond)	//0.5秒待機
 	fmt.Println("ぽん！")
+	time.Sleep(200 * time.Millisecond)	//0.2秒待機
 
-	fmt.Println(enemyHand)
+	fmt.Println("自分の手:" + hand[my_hand])
+	fmt.Println("相手の手:" + hand[enemyHand])
 	rspResult = rspBattle(my_hand, enemyHand)
 	time.Sleep(500 * time.Millisecond)	//0.5秒待機
 	printResult(rspResult)
