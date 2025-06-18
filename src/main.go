@@ -11,10 +11,12 @@ func main() {
 	var enemyHand int
 	var rspResult int
 
-	fmt.Println("出す手を決めてください")
-	fmt.Println("0:グー 1:チョキ 2:パー")
-	fmt.Scan(&my_hand)
-
+	my_hand = -1
+	for 0 > my_hand || my_hand > 2{
+		fmt.Println("出す手を決めてください")
+		fmt.Println("0:グー 1:チョキ 2:パー")
+		fmt.Scan(&my_hand)
+	}
 	enemyHand = getRandom()
 
 	fmt.Println("じゃんけんぽん！")
